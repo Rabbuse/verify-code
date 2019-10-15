@@ -1,0 +1,15 @@
+{
+    "name": "st-meteor/verify-code",
+    "description": "会员的注册登录和验证码",
+    "type": "plugin",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "stMeteor\\code\\": "src/"
+        }
+    }
+}
