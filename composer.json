@@ -3,7 +3,7 @@
     "description": "会员的注册登录和验证码",
     "type": "plugin",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "require": {
         "php": ">=7.0"
     },
