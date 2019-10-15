@@ -1,6 +1,6 @@
 {
     "name": "st-meteor/verify-code",
-    "description": "会员的注册登录和验证码",
+    "description": "云片网验证码发送与检验",
     "type": "plugin",
     "license": "MIT",
     "version": "1.0.1",
