@@ -70,9 +70,14 @@ class VerifyCode{
         //curl云片网接口
         $data = ['text' => str_replace('#code#', $random, $this->text), 'apikey' => $this->apikey, 'mobile' => $tel];
         $result = Util::doCurl('https://sms.yunpian.com/v2/sms/single_send.json', true, $data);
-//                //解析返回结果（json格式字符串）
-//            $array = json_decode($json_data,true);
-        var_dump($result);
+        if($result === false){
+            return Util::returnSuccess('地址请求失败');
+        }
+        //解析返回结果（json格式字符串）
+        $array = json_decode($result,true);
+        if(!empty($array['code'])){
+            return Util::returnSuccess($array['msg']);
+        }
         $data = [
             'tel' => $tel,
             'code' => $random,
